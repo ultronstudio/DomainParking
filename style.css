@@ -5,99 +5,132 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7fbfd;
-  color: #111827;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0f172a;
 }
 
 body {
+  position: relative;
+  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(14, 165, 233, 0.12), transparent 46%),
+    radial-gradient(circle at 90% 0%, rgba(59, 130, 246, 0.08), transparent 38%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .container {
   width: 100%;
-  max-width: 680px;
+  max-width: 760px;
 }
 
 .card {
-  background: #ffffff;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border: 1px solid #dbe7ee;
-  border-radius: 20px;
-  padding: 40px 28px;
+  border-radius: 24px;
+  padding: 46px 34px;
   text-align: center;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 28px 64px rgba(2, 6, 23, 0.08),
+    0 8px 20px rgba(2, 6, 23, 0.06);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.36), rgba(226, 232, 240, 0.4), rgba(59, 130, 246, 0.24));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .label {
   margin: 0 0 14px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #00b7ef;
+  color: #0369a1;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(32px, 6vw, 56px);
-  line-height: 1.05;
+  font-size: clamp(32px, 6vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
   word-break: break-word;
 }
 
 .subtitle {
-  margin: 18px auto 0;
-  max-width: 520px;
+  margin: 20px auto 0;
+  max-width: 560px;
   font-size: 18px;
-  line-height: 1.6;
-  color: #4b5563;
+  line-height: 1.55;
+  color: #475569;
 }
 
 .actions {
-  margin-top: 28px;
+  margin-top: 30px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 22px;
+  padding: 13px 22px;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 700;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  opacity: 0.95;
 }
 
 .btn.primary {
-  background: #00b7ef;
+  background: linear-gradient(180deg, #0ea5e9 0%, #0284c7 100%);
   color: #ffffff;
+  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.28);
+}
+
+.btn.primary:hover {
+  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.34);
 }
 
 .btn.secondary {
-  background: #eef7fb;
+  background: #f1f5f9;
   color: #0f172a;
-  border: 1px solid #d7ebf3;
+  border: 1px solid #d7e1ec;
+}
+
+.btn.secondary:hover {
+  background: #e8eef5;
 }
 
 .note {
-  margin-top: 24px;
+  margin-top: 26px;
   font-size: 15px;
-  color: #6b7280;
+  color: #64748b;
 }
 
 .note a {
-  color: #00b7ef;
+  color: #0284c7;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .note a:hover {
@@ -106,7 +139,8 @@ h1 {
 
 @media (max-width: 560px) {
   .card {
-    padding: 32px 20px;
+    border-radius: 18px;
+    padding: 34px 20px;
   }
 
   .subtitle {

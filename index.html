@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doména na prodej</title>
-  <meta name="description" content="Tato doména je k dispozici. V případě zájmu mě kontaktujte." />
+  <title>Domain for sale</title>
+  <meta id="metaDescription" name="description" content="This domain may be available for acquisition." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="container">
     <div class="card">
-      <p class="label">Doménové parkoviště</p>
+      <p id="labelText" class="label">Domain parking</p>
       <h1 id="domainName">example.cz</h1>
-      <p class="subtitle">
-        Tato doména je momentálně zaparkovaná a může být k dispozici k odkupu.
-      </p>
+      <p id="subtitleText" class="subtitle">This domain is currently parked and may be available for purchase.</p>
 
       <div class="actions">
         <a id="contactLink" class="btn primary" href="mailto:info@petrvurm.cz?subject=Zájem o doménu">
-          Mám zájem
+          <span id="contactCtaText">I am interested</span>
         </a>
         <a class="btn secondary" href="https://petrvurm.cz" target="_blank" rel="noopener noreferrer">
           petrvurm.cz
@@ -26,8 +24,8 @@
       </div>
 
       <p class="note">
-        Pro více informací napište na
-        <a href="mailto:info@petrvurm.cz">info@petrvurm.cz</a>
+        <span id="notePrefixText">For more information, contact</span>
+        <a id="noteMailLink" href="mailto:info@petrvurm.cz">info@petrvurm.cz</a>
       </p>
     </div>
   </main>
