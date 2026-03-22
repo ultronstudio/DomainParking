@@ -6,47 +6,44 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #0f172a;
+  color: #111827;
 }
 
 body {
-  position: relative;
-  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px;
+  padding: 24px;
   background:
-    radial-gradient(circle at 10% -10%, rgba(14, 165, 233, 0.12), transparent 46%),
-    radial-gradient(circle at 90% 0%, rgba(59, 130, 246, 0.08), transparent 38%),
-    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    linear-gradient(rgba(17, 24, 39, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.03) 1px, transparent 1px),
+    #eef2f7;
+  background-size: 28px 28px, 28px 28px, auto;
 }
 
 .container {
   width: 100%;
-  max-width: 760px;
+  max-width: 740px;
 }
 
 .card {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid #dbe7ee;
-  border-radius: 24px;
-  padding: 46px 34px;
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 16px;
+  padding: 44px 34px;
   text-align: center;
-  box-shadow:
-    0 28px 64px rgba(2, 6, 23, 0.08),
-    0 8px 20px rgba(2, 6, 23, 0.06);
+  box-shadow: 0 20px 50px rgba(17, 24, 39, 0.08);
 }
 
 .card::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 12px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.36), rgba(226, 232, 240, 0.4), rgba(59, 130, 246, 0.24));
+  background: linear-gradient(90deg, rgba(0, 183, 239, 0.3), rgba(0, 183, 239, 0));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -55,46 +52,47 @@ body {
 }
 
 .label {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #0369a1;
+  color: #00B7EF;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(32px, 6vw, 62px);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: #0f172a;
   word-break: break-word;
 }
 
 .subtitle {
-  margin: 20px auto 0;
-  max-width: 560px;
-  font-size: 18px;
-  line-height: 1.55;
-  color: #475569;
+  margin: 18px auto 0;
+  max-width: 540px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4b5563;
 }
 
 .actions {
   margin-top: 30px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
+  min-width: 150px;
   padding: 13px 22px;
-  border-radius: 12px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover {
@@ -102,33 +100,34 @@ h1 {
 }
 
 .btn.primary {
-  background: linear-gradient(180deg, #0ea5e9 0%, #0284c7 100%);
+  background: #00B7EF;
+  border: 1px solid #00B7EF;
   color: #ffffff;
-  box-shadow: 0 10px 20px rgba(2, 132, 199, 0.28);
+  box-shadow: 0 8px 18px rgba(0, 183, 239, 0.35);
 }
 
 .btn.primary:hover {
-  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.34);
+  box-shadow: 0 10px 22px rgba(0, 183, 239, 0.4);
 }
 
 .btn.secondary {
-  background: #f1f5f9;
-  color: #0f172a;
-  border: 1px solid #d7e1ec;
+  background: #f8fafc;
+  color: #1f2937;
+  border: 1px solid #d2dbe5;
 }
 
 .btn.secondary:hover {
-  background: #e8eef5;
+  border-color: #00B7EF;
 }
 
 .note {
-  margin-top: 26px;
+  margin-top: 24px;
   font-size: 15px;
-  color: #64748b;
+  color: #6b7280;
 }
 
 .note a {
-  color: #0284c7;
+  color: #00B7EF;
   text-decoration: none;
   font-weight: 600;
 }
@@ -139,7 +138,7 @@ h1 {
 
 @media (max-width: 560px) {
   .card {
-    border-radius: 18px;
+    border-radius: 14px;
     padding: 34px 20px;
   }
 
