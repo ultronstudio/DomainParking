@@ -1,5 +1,5 @@
 (function () {
-  const CONTACT_EMAIL = "info@petrvurm.cz";
+  const CONTACT_EMAIL = "kontakt@petrvurm.cz";
   const BRAND_URL = "https://petrvurm.cz";
   const rawHost = window.location.hostname;
   const hostname = rawHost === "localhost" ? "example.cz" : rawHost;
